@@ -3,7 +3,7 @@ import {
     presetAttributify,
     presetIcons,
     presetTypography,
-    presetWind,
+    presetUno,
     transformerCompileClass,
 } from "unocss";
 
@@ -12,9 +12,14 @@ export default defineConfig({
         presetAttributify({
             prefix: "uno:",
         }),
-        presetWind(),
+        presetUno(),
         presetTypography(),
-        presetIcons(),
+        presetIcons({
+            extraProperties: {
+                height: "1.3rem",
+                width: "1.3rem",
+            },
+        }),
     ],
     transformers: [transformerCompileClass()],
 });
