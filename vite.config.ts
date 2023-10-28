@@ -2,20 +2,12 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import Pages from "vite-plugin-pages";
 import { VitePWA } from "vite-plugin-pwa";
-import Inspect from "vite-plugin-inspect";
-import Inspector from "vite-plugin-vue-inspector";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import VueDevTools from "vite-plugin-vue-devtools";
 import Unocss from "unocss/vite";
 
 export default defineConfig({
-    resolve: {
-        alias: {},
-    },
-    server: {
-        port: 3000,
-    },
     plugins: [
         VueDevTools(),
         vue(),
@@ -58,7 +50,5 @@ export default defineConfig({
                 ],
             },
         }),
-        Inspect(),
-        Inspector(),
     ],
 });
